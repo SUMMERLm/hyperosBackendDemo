@@ -17,8 +17,7 @@ spec:
         app.kubernetes.io/name: backend
     spec:
       containers:
-      - command:
-        image: 122.96.144.180:30080/frontend/hyperos_backend_demo:v0.0.1 
+      - image: 122.96.144.180:30080/frontend/hyperos_backend_demo:v0.0.1
         imagePullPolicy: IfNotPresent
         name: backend
       dnsPolicy: ClusterFirst
