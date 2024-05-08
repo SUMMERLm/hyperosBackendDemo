@@ -12,7 +12,10 @@ func GetIndex(c *gin.Context) {
 }
 
 func PostTest(c *gin.Context) {
-	hpaMsg := c.GetHeader("Alertname")
-	klog.Infof(hpaMsg)
+	scnid := c.GetHeader("SCNID")
+	klog.Infof("scnid is %s ", scnid)
+	HOST := c.GetHeader("HOSTss")
+	klog.Infof("host is %s", HOST)
+
 	c.String(stateDone, "HyperOS backend Demo: Post test")
 }
